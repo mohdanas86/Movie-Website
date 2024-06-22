@@ -53,13 +53,6 @@ const Header = () => {
         <div className="w-[60%] md:w-[33.3%] h-full bg-white flex flex-col justify-start items-start text-black py-4 px-4 gap-4 relative" onClick={(e) => e.stopPropagation()}>
           <div className="w-full flex justify-between items-center">
             <a href="/" className="text-2xl font-semibold">Stomilar</a>
-            {isLoggedin && (
-              <div className="flex justify-center items-center">
-                <SignedIn>
-                  <UserButton />
-                </SignedIn>
-              </div>
-            )}
           </div>
           <div className="flex justify-center items-start flex-col w-full gap-2">
             {list.map((v, i) => (
@@ -72,30 +65,9 @@ const Header = () => {
               </span>
             ))}
           </div>
-          {!isLoggedin && (
-            <div className="w-full py-4 px-4 flex justify-center items-center absolute bottom-0 left-0">
-              <button 
-                className="justify-center items-center flex bg-blue-500 text-white w-full py-1 rounded" 
-                onClick={() => setLogout(e => !e)}
-              >
-                Sign In
-              </button>
-            </div>
-          )}
         </div>
-        {logout && (
-          <div className="w-full h-full flex justify-center items-center bg-black text-white z-50 absolute top-0 left-0" onClick={(e) => e.stopPropagation()}>
-            <SignedOut>
-              <SignIn />
-            </SignedOut>
-            <div className="absolute top-4 right-4">
-              <span className="text-2xl text-red-500" onClick={() => setLogout(e => !e)}>x</span>
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
 }
 
-export default Header;
