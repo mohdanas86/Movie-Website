@@ -15,7 +15,7 @@ const Hollywood = () => {
   // FETCHING MOVIES DATA
   const fetchData = async () => {
     try {
-      const url = `http://www.omdbapi.com/?apikey=ae980f94&s=cartoon`;
+      const url = `https://www.omdbapi.com/?apikey=ae980f94&s=cartoon`;
       const response = await Axios.get(url);
       console.log(response.data.Search);
       setMovies(response.data.Search || []);

@@ -29,7 +29,7 @@ console.log(category)
   const fetchData = async () => {
     try {
      // const url = `http://www.omdbapi.com/?apikey=ae980f94&s=${value}&page=${count}`;
-      const url = `http://www.omdbapi.com/?apikey=ae980f94&s=${category}&page=${count}`;
+      const url = `https://www.omdbapi.com/?apikey=ae980f94&s=${category}&page=${count}`;
       const response = await Axios.get(url);
       if (!response.data.Response === "true") {
         setCount(count);
