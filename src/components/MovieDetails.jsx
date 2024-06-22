@@ -9,7 +9,7 @@ const MovieDetails = () => {
   console.log(id)
   const fetchDetails = async() =>{
     try{
-   const url = `http://www.omdbapi.com/?apikey=ae980f94&i=${id}`;
+   const url = `https://www.omdbapi.com/?apikey=ae980f94&i=${id}`;
    const response = await Axios.get(url)
    console.log(response.data)
    setMovieDetails(response.data)
