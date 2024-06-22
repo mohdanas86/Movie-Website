@@ -20,7 +20,7 @@ const Hollywood = () => {
       console.log(response.data.Search);
       setMovies(response.data.Search || []);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.log('Error fetching data:', error);
     }
   };
 
