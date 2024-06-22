@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import { SignedIn, SignedOut, SignIn, SignUp, UserButton } from '@clerk/clerk-react';
 import useBodyScrollLock from "../Hooks/useBodyScrollLock.jsx";
 import { GiHamburgerMenu } from "react-icons/gi";
 

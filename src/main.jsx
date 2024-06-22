@@ -8,12 +8,9 @@ import './index.css';
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 
-import { ClerkProvider } from '@clerk/clerk-react';
-const publishableKey = "pk_test_c2hhcnAtZ2FubmV0LTM5LmNsZXJrLmFjY291bnRzLmRldiQ";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <ClerkProvider publishableKey={publishableKey}>
     <BrowserRouter>
     <MovieProvider>
     <Header />
@@ -24,6 +21,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Footer />
     </MovieProvider>
     </BrowserRouter>
-    </ClerkProvider>
   </React.StrictMode>
 );
