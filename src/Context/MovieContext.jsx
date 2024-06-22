@@ -1,11 +1,11 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 
 export const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
   const [category, setCategory] = useState("hollywood");
-  const value = { category, setCategory };
 
+  const value = { category, setCategory };
   return (
     <MovieContext.Provider value={value}>{children}</MovieContext.Provider>
   );
